@@ -1,22 +1,21 @@
-import { useState, useEffect } from 'react'
-import useAuth from "../hooks/useAuth";
+import { useState, useEffect } from "react"
+import useAuth from "../hooks/useAuth"
 
 const Admin = () => {
+	// const [ veterinario, setVeterinario ] = useState({});
 
-    // const [ veterinario, setVeterinario ] = useState({});
+	useEffect(() => {
+		const datosUsuario = () => {
+			const auth = useAuth()
+			// // setVeterinario(auth)
+			// console.log(auth);
+		}
+		datosUsuario()
+	}, [])
 
-    useEffect(() => {
-        const datosUsuario = () => {
-            const auth = useAuth();
-            // // setVeterinario(auth)
-            // console.log(auth);
-        }
-        datosUsuario()
-    }, []);
-
-    return (
-        <>
-            {/* {
+	return (
+		<>
+			{/* {
                 !veterinario &&
                     <p>No hay veterinario</p>
             }
@@ -24,8 +23,8 @@ const Admin = () => {
                 veterinario &&
                     <p>Si hay veterinario: {`${veterinario.nombre}`}</p>
             } */}
-        </>
-    )
+		</>
+	)
 }
 
 export default Admin

@@ -8,7 +8,6 @@ import NewPassword from './pages/NewPassword';
 import Admin from './pages/Admin';
 import { AuthProvider } from './context/AuthProvider'
 
-
 function App() {
 
   return (
